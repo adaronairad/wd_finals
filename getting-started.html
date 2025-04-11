@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started | SwapIt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/getting-started.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 onclick="home()">SwapIt</h1>
+        </nav>
+    </header>
+    <main>
+        <section class="getting-started">
+            <div class="form"> 
+                <h1>Let's get to know each other.</h1> 
+                <h2>Setup your acount</h2>
+                <p>Introduce yourself</p>
+                <form action="getting-started-pic.html" id="getting-started-form" class="getting-started-form" onsubmit="return validateForm()">
+                    <label for="name">Your name</label>
+                    <div class="bar">
+                        <input type="text" class="input" id="name" name="name" required placeholder="Enter your name"><br>
+                    </div>
+                    <label for="username">Create username</label>
+                    <div class="bar">
+                        <input type="text" class="input" id="username" name="username" required placeholder="Enter your username"><br>
+                    </div>
+                    <label for="campus">Campus</label>
+                    <div class="bar">
+                        <select class="input" id="campus" name="campus" required>
+                            <option value="" disabled selected>Select your campus</option>
+                            <option value="main">Main</option>
+                            <option value="campus-b">Campus B</option>
+                            <option value="campus-c">Campus C</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="btn-container">
+                <button class="continue-btn" form="getting-started-form" id="submit" type="submit">Continue</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const username = document.getElementById('username').value.trim();
+            const campus = document.getElementById('campus').value;
+    
+            if (!name || !username || !campus) {
+                alert('Please fill out all required fields.');
+                return false;
+            }
+    
+            return true;
+        }
+
+        function home() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started | SwapIt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/getting-started.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 onclick="home()">SwapIt</h1>
+        </nav>
+    </header>
+    <main>
+        <section class="getting-started">
+            <div class="form"> 
+                <h1>Let's get to know each other.</h1> 
+                <h2>Setup your acount</h2>
+                <p>Add your photo</p>
+                <div class="upload">
+                    <div class="profile-pic">
+                        <img src="img/vector-2.jpg" alt="default-pic">
+                        <p class="add-photo" onclick="triggerFilePicker()">Upload a photo</p>
+                        <input type="file" id="fileInput" style="display: none;" accept="image/*">
+                    </div>
+
+                    <div class="tips">
+                        <p>Tips:</p>
+                        <p>1. Use a Clear, Front-Facing Photo <br>
+                            2. Keep It Campus-Appropriate<br>
+                            3. Consider Wearing Your WMSU ID </p>  
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="skip-btn" id="submit">Skip</button>
+                <button class="continue-btn" id="submit" onclick="continueBtn()">Continue</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        function continueBtn(){
+            window.location.href = "categories.html";
+        }
+
+        function triggerFilePicker() {
+            const fileInput = document.getElementById('fileInput');
+            fileInput.click();
+        }
+
+        function home() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
