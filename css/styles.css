@@ -173,7 +173,7 @@ body {
     color: #ccc;
 }
 
-.search-icon i {
+.search-icon-container .search-icon {
     margin-left: 10px;
 }
 
