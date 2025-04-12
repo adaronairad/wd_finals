@@ -27,7 +27,7 @@
                     </div>
                     <div class="btn-container categories-btn">
                         <button class="skip-btn" id="submit">Skip</button>
-                        <button class="continue-btn" id="submit">Continue</button>
+                        <button class="continue-btn" id="submit" onclick="homepage()">Continue</button>
                     </div>
                 </div>
                 <div class="category-list">
@@ -58,9 +58,11 @@
             window.location.href = "index.html";
         }
 
-        function home() {
-        window.location.href = "index.html";
+        function homepage() {
+            window.location.href = "home.html";
         }
+
+        
 
         document.addEventListener('DOMContentLoaded', () => {
             const categoryItems = document.querySelectorAll('.category-item');
