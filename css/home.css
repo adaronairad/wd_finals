@@ -161,7 +161,7 @@ body {
     background-color: white;
 }
 
-.collections{
+.collections {
     margin: 120px 0 0 20px;
     width: 50px;
     height: 50px;
@@ -169,7 +169,15 @@ body {
     cursor: pointer;
 }
 
-.collections h1 {
+.trending {
+    margin: 120px 0 0 20px;
+    width: 50px;
+    height: 50px;
+    color: #333;
+    cursor: pointer;
+}
+
+.collections h1, .trending h1 {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 24px;
@@ -225,9 +233,61 @@ body {
     color: #333;
 }
 
+.trending-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    background-color: #e7f9e9;
+}
 
+.trending {
+    margin: 40px 0 0 20px;
+    width: 50px;
+    height: 50px;
+    color: #333;
+    cursor: pointer;
+}
 
+.trending-card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    padding-top: 20px;
+}
 
+.trending-card-container::-webkit-scrollbar {
+    height: 5px;
+}
+
+.trending-card-container::-webkit-scrollbar-thumb {
+    background: #4caf50;
+    border-radius: 4px;
+}
+
+.trending-card {
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 25px;
+    flex-shrink: 0;
+}
+
+.trending-card-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.trending-card-img {
+    width: 100%;
+    height: 100%;
+}
 
 
 
