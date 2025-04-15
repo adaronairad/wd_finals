@@ -251,6 +251,7 @@ body {
 
 .trending-card-container {
     display: flex;
+    flex-direction: column;
     overflow-x: auto;
     gap: 20px;
     padding: 20px;
@@ -269,24 +270,19 @@ body {
 
 .trending-card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 180px;
-    height: 180px;
+    height: 200px;
     background: white;
     border-radius: 25px;
     flex-shrink: 0;
 }
 
-.trending-card-content{
-    display: flex;
-    flex-direction: column;
+.trending-card img {
     width: 100%;
-    height: 100%;
-}
-
-.trending-card-img {
-    width: 100%;
-    height: 100%;
+    height: auto;
+    border-radius: 25px 25px 0 0;
 }
 
 
