@@ -82,6 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 50px;
+    min-width: 50px;
     height: 50px;
     background-color: #4caf50;
     border-radius: 50%;
@@ -99,6 +100,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 50px;
+    min-width: 50px;
     height: 50px;
     background-color: #4caf50;
     border-radius: 50%;
@@ -340,21 +342,68 @@ body {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(6, 1fr);
-    row-gap: 90px;
-    padding: 20px;
-    padding-top: 20px;
-  }
+    row-gap: 40px;
+    padding-top: 40px;
+}
 
-  .grid-item {
+.grid-item {
     justify-self: center;
-    align-self: center;
     width: 170px;
-    height: 170px;
-    background-color: #4caf50;
     color: white;
     text-align: center;
     border-radius: 16px;
-  }
+}
+
+.grid-item-content{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item-content img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.grid-item-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item-info h2 {
+    text-align: left;
+    max-lines: 3;
+    font-size: 16px;
+    margin: 10px 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.grid-other-info{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-other-info i {
+    font-size: 16px;
+    color: #666;
+}
+
+.grid-other-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0 15px 0 5px;
+}
+
+
+
 
 
 
@@ -365,6 +414,8 @@ footer{
     display: flex;
     justify-content: center;
     background-color: white;
+    height: 40px;
+    align-items: end;
 }  
 
 
