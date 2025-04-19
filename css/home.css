@@ -9,8 +9,8 @@ body {
     background-color: #f0f0f0;
 }
 
-.navbar {
-    background-color: white;
+.navbar-home {
+    background-color: #aed5a7;
     display: flex;
     color: white;
     padding: 5px 0;
@@ -22,27 +22,27 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar h1 {
+.navbar-home h1 {
     padding: 10px 20px;
     font-size: 35px;
-    color: #333;  
+    color: whitesmoke;  
     cursor: pointer; 
 }
 
-.navbar ul {
+.navbar-home ul {
     padding: 20px;
     list-style: none;
     display: flex;
 }
 
-.navbar ul li a {
+.navbar-home ul li a {
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-decoration: none;
     color: white;
     padding: 20px 20px;
-    color: #333;
+    color: whitesmoke;
 }
 
 
@@ -118,13 +118,13 @@ body {
     font-weight: 500;
     font-size: 20px;
     text-decoration: none;
-    color: #333;
+    color: white;
     margin: 20px 10px;
 }
 
 .messages {
     border-radius: 50%;
-    color: #333;
+    color: white;
     cursor: pointer;
     margin: 20px 10px;
 }
@@ -135,7 +135,7 @@ body {
 
 .notification {
     border-radius: 50%;
-    color: #333;
+    color: white;
     cursor: pointer;
     margin: 20px 10px;
 }
@@ -150,7 +150,7 @@ body {
     align-items: center;
     width: 50px;
     height: 50px;
-    color: #333;
+    color: white;
     cursor: pointer;
     margin: 20px 0 20px 0;
 }
@@ -206,6 +206,7 @@ body {
     background-color: #e7f9e9;
     border-radius: 25px;
     flex-shrink: 0;
+    border: 1px solid #cacaca;
 }
 
 .card-content{
@@ -402,14 +403,6 @@ body {
     margin: 0 15px 0 5px;
 }
 
-
-
-
-
-
-
-
-
 footer{
     display: flex;
     justify-content: center;
@@ -419,14 +412,35 @@ footer{
 }  
 
 
-
-@media screen and (max-width: 768px) {
-    .about .about-us {
-      max-width: 100% !important;
-      padding: 100px 40px !important;
+  @media screen and (max-width: 1048px) {
+    .search-bar-home{
+        width: 50%;
     }
-
-    .navbar ul {
+    .navbar-home ul {
         display: none;
     }
+
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
   }
+
+@media screen and (max-width: 870px) {
+    .navbar-home ul {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .navbar-home ul {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
