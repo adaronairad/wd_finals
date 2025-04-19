@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar-home {
+    background-color: #aed5a7;
+    display: flex;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-home h1 {
+    padding: 10px 20px;
+    font-size: 35px;
+    color: #333;  
+    cursor: pointer; 
+}
+
+.navbar-home ul {
+    padding: 20px;
+    list-style: none;
+    display: flex;
+}
+
+.navbar-home ul li a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 20px 20px;
+    color: whitesmoke;
+}
+
+
+.search-bar-home {
+    background-color: white;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    padding: 10px 15px;
+    margin-top: 10px;
+    height: 50px;
+    width: 40%;
+    border: 1px solid #ccc;
+}
+.search-bar-home input {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    width: 100%;
+    padding-left: 10px;
+    background-color: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-bar-home input::placeholder {
+    color: #ccc;
+}
+
+.search-icon {
+    margin-left: 5px;
+    color: #333;
+}
+
+.plus-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+}
+
+.plus-icon {
+    color: #fff;
+}
+
+.user-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+}
+
+.user-icon-container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-icon {
+    color: #fff;
+}
+
+.username {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    margin: 20px 10px;
+}
+
+.messages {
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+
+.messages:hover{
+    color: #4CAF50;
+}
+
+.notification {
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+
+.notification:hover{
+    color: #4CAF50;
+}
+
+.user-info-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    margin: 20px 0 20px 0;
+}

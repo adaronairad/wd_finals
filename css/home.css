@@ -12,7 +12,6 @@ body {
 .navbar-home {
     background-color: #aed5a7;
     display: flex;
-    color: white;
     padding: 5px 0;
     position: fixed;
     top: 0;
@@ -25,7 +24,7 @@ body {
 .navbar-home h1 {
     padding: 10px 20px;
     font-size: 35px;
-    color: whitesmoke;  
+    color: #333;  
     cursor: pointer; 
 }
 
@@ -212,6 +211,7 @@ body {
     border-radius: 25px;
     flex-shrink: 0;
     border: 1px solid #cacaca;
+    cursor: pointer;
 }
 
 .card-content{
@@ -353,6 +353,7 @@ body {
 }
 
 .grid-item {
+    cursor: pointer;
     justify-self: center;
     width: 170px;
     color: white;
