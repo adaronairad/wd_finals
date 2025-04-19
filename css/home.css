@@ -109,6 +109,11 @@ body {
     margin: 10px 0 0 10px;
 }
 
+.user-icon-container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
 .user-icon {
     color: #fff;
 }
