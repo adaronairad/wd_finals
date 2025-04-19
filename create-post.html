@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwapIt</title>
+    <title>Create Post | SwapIt</title>
     <link rel="stylesheet" href="css/create-post.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +12,14 @@
 </head>
 <body>
     <header>
-        <nav class="navbar-home">
+        <nav class="navbar-create-post">
             <h1 onclick="home()">SwapIt</h1>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="#contact">Browse</a></li>
             </ul>
-            <div class="search-bar-home">
-                <div class="search-icon-home">
+            <div class="search-bar-create-post">
+                <div class="search-icon-create-post">
                     <i class="material-symbols-outlined search-icon">search</i>
                 </div>
                 <input type="text" placeholder="Search for items...">
@@ -45,6 +45,45 @@
         </nav>
     </header>
     <main>
+        <section class="create-post-section">
+            <div class="form">
+                <div class="create-post-title">
+                    <h2>Create a new post</h2>
+                </div>
+                <div class="form-content">
+                    <div class="left-side">
+                        <div class="left-side-box">
+                            <div class="img-box">
+                                <i class="material-symbols-outlined">image</i>
+                            </div>
+                            <div class="btn-container">
+                                <div class="upload-btn">
+                                    <i class="material-symbols-outlined plus-icon">add</i><span>Add photos</span>
+                                </div>
+                            </div>
+                            <p>Add photos manually or drag and drop them here</p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="right-side-box">
+                            <p>Title</p>
+                            <div class="title-bar">
+                                <input type="text" placeholder="Enter title" required>
+                            </div>
+                            <p>Description</p>
+                            <div class="description-bar">
+                                <textarea class="description-text" placeholder="Describe your item" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
 
     </main>
     <footer>
