@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav class="navbar-home">
-            <h1 onclick="home()">SwapIt</h1>
+            <h1 onclick="location.href='home.html'">SwapIt</h1>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="#contact">Browse</a></li>
@@ -24,7 +24,7 @@
                 </div>
                 <input type="text" placeholder="Search for items...">
             </div>
-            <div class="plus-icon-container" onclick="add()">
+            <div class="plus-icon-container" onclick="location.href='create-post.html'">
                 <i class="material-symbols-outlined plus-icon" >add</i>
             </div>
             <div class="user-dropdown">
@@ -74,7 +74,7 @@
                 <h1>Collections</h1>
             </div>
             <div class="card-container">
-                <div class="card">
+                <div class="card" onclick="location.href='accessories.html'">
                     <div class="card-content">
                         <div class="card-img">
                             <img src="img/accessories.jpg" alt="accessories">
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="location.href='art-supplies.html'">
                     <div class="card-content">
                         <div class="card-img">
                             <img src="img/art-supplies.jpg" alt="art-supplies">
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="location.href='beauty.html'">
                     <div class="card-content">
                         <div class="card-img">
                             <img src="img/beauty.jpg" alt="beauty">
@@ -1443,14 +1443,6 @@
         <p>&copy; 2025 SwapIt</p>
     </footer>
     <script>
-        function home() {
-            window.location.href = "index.html";
-        }
-
-        function add(){
-            window.location.href = "create-post.html"
-        }
-
         function toggleUserDropdown() {
             const dropdownMenu = document.getElementById("userDropdownMenu");
             const dropdownIcon = document.querySelector(".user-dropdown-icon");
