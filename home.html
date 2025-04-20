@@ -27,15 +27,42 @@
             <div class="plus-icon-container" onclick="add()">
                 <i class="material-symbols-outlined plus-icon" >add</i>
             </div>
-            <div class="user-icon-container">
-                <img src="img/user.jpg" alt="user">
+            <div class="user-dropdown">
+                <div class="user-dropdown-trigger" onclick="toggleUserDropdown()">
+                    <img src="img/user.jpg" alt="user" class="user-dropdown-img">
+                    <p class="user-dropdown-name">Adrian</p>
+                    <i class="material-symbols-outlined user-dropdown-icon">keyboard_arrow_down</i>
+                </div>
+                <div class="user-dropdown-menu" id="userDropdownMenu">
+                    <div class="user-dropdown-profile">
+                        <div class="user-dropdown-avatar">
+                            <p>A</p>
+                        </div>
+                        <p class="user-dropdown-fullname">Adrian</p>
+                        <p class="user-dropdown-username">@adrianorada</p>
+                    </div>
+                    <div class="user-dropdown-stats">
+                        <div>
+                            <p>0</p>
+                            <p>trades</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>followers</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>following</p>
+                        </div>
+                    </div>
+                    <div class="user-dropdown-settings">
+                        <button onclick="openSettings()">Settings</button>
+                    </div>
+                </div>
             </div>
-            <div class="username">
-                <p>Adrian</p>
-            </div>
-            <div class="user-info">
-                <i class="material-symbols-outlined user-info-icon">keyboard_arrow_down</i>
-            </div>
+
+
+
             <div class="messages">
                 <i class="material-symbols-outlined message-icon">mail</i>
             </div>
@@ -1426,5 +1453,20 @@
         function add(){
             window.location.href = "create-post.html"
         }
+
+        function toggleUserDropdown() {
+            const dropdownMenu = document.getElementById("userDropdownMenu");
+            const dropdownIcon = document.querySelector(".user-dropdown-icon");
+            
+            dropdownMenu.classList.toggle("show");
+            dropdownIcon.classList.toggle("rotate");
+        }
+
+        window.onclick = function (event) {
+            const dropdownMenu = document.getElementById("userDropdownMenu");
+            if (!event.target.closest(".user-dropdown")) {
+                dropdownMenu.style.display = "none";
+            }
+};
     </script>
 </body>
