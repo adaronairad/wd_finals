@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | SwapIt</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> 
+</head>
+<body>
+    <header>
+        <nav class="navbar-home">
+            <h1>SwapIt</h1>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">Browse</a></li>
+            </ul>
+            <div class="search-bar-home">
+                <div class="search-icon-home">
+                    <i class="material-symbols-outlined search-icon">search</i>
+                </div>
+                <input type="text" placeholder="Search for items...">
+            </div>
+            <div class="plus-icon-container" onclick="add()">
+                <i class="material-symbols-outlined plus-icon" >add</i>
+            </div>
+            <div class="user-dropdown">
+                <div class="user-dropdown-trigger" onclick="toggleUserDropdown()">
+                    <img src="img/user.jpg" alt="user" class="user-dropdown-img">
+                    <p class="user-dropdown-name">Adrian</p>
+                    <i class="material-symbols-outlined user-dropdown-icon">keyboard_arrow_down</i>
+                </div>
+                <div class="user-dropdown-menu" id="userDropdownMenu">
+                    <div class="user-dropdown-profile">
+                        <div class="user-dropdown-avatar">
+                            <p>A</p>
+                        </div>
+                        <p class="user-dropdown-fullname">Adrian</p>
+                        <p class="user-dropdown-username">@adrianorada</p>
+                    </div>
+                    <div class="user-dropdown-stats">
+                        <div>
+                            <p>0</p>
+                            <p>trades</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>followers</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>following</p>
+                        </div>
+                    </div>
+                    <div class="user-dropdown-settings">
+                        <button onclick="openSettings()">Settings</button>
+                    </div>
+                </div>
+            </div>
+            <div class="messages">
+                <i class="material-symbols-outlined message-icon">mail</i>
+            </div>
+            <div class="notification">
+                <i class="material-symbols-outlined notification-icon">notifications</i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="item-info">
+            <div class="left-item-info">
+                <div class="item-info-pic">
+                    <img src="img/textbooks-5.jpg" alt="textbooks">
+                    <img src="img/textbooks-5.jpg" alt="textbooks">
+                    <img src="img/textbooks-5.jpg" alt="textbooks">
+                </div>
+                <div class="item-info-pic-big">
+                    <img src="img/textbooks-5.jpg" alt="textbooks">
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+    <footer>
+        <p>&copy; 2025 SwapIt</p>
+    </footer>
+    <script>
+        function home() {
+            window.location.href = "index.html";
+        }
+
+        function add(){
+            window.location.href = "create-post.html"
+        }
+
+        function toggleUserDropdown() {
+            const dropdownMenu = document.getElementById("userDropdownMenu");
+            const dropdownIcon = document.querySelector(".user-dropdown-icon");
+            
+            dropdownMenu.classList.toggle("show");
+            dropdownIcon.classList.toggle("rotate");
+        }
+
+        window.onclick = function (event) {
+            const dropdownMenu = document.getElementById("userDropdownMenu");
+            if (!event.target.closest(".user-dropdown")) {
+                dropdownMenu.style.display = "none";
+            }
+};
+    </script>
+</body>

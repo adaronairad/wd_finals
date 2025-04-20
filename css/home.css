@@ -613,6 +613,53 @@ body {
     text-align: justify;
     color: #666;
 }
+/*end of accessories section page*********************************************************************************/
+
+.item-info {
+    background-color: white;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.left-item-info {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.item-info-pic {
+    margin-left: 20px;
+    width: 90px;
+    height: 90px;
+}
+
+.item-info-pic img:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 5px solid #4CAF50;
+    margin: 0 0 10px 0;
+}
+
+.item-info-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 0 0 10px 0;
+}
+
+.item-info-pic-big{
+    width: 75%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.item-info-pic-big img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
 
 
 
