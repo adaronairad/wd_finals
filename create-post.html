@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Post | SwapIt</title>
+    <title>Create New Post | SwapIt</title>
     <link rel="stylesheet" href="css/create-post.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,14 +51,15 @@
                     <h2>Create a new post</h2>
                 </div>
                 <div class="form-content">
-                    <div class="left-side">
+                    <div class="left-side" onclick="triggerFilePicker()">
                         <div class="left-side-box">
                             <div class="img-box">
                                 <i class="material-symbols-outlined">image</i>
                             </div>
                             <div class="btn-container">
                                 <div class="upload-btn">
-                                    <i class="material-symbols-outlined plus-icon">add</i><span>Add photos</span>
+                                    <i class="material-symbols-outlined plus-icon">add</i><span onclick="triggerFilePicker()">Add photos</span>
+                                    <input type="file" id="fileInput" style="display: none;" accept="image/*">
                                 </div>
                             </div>
                             <p>Add photos manually or drag and drop them here</p>
@@ -107,14 +108,14 @@
                                     <option value="" disabled selected>Select Condition</option>
 
                                     <optgroup label="New">
-                                      <option value="new">Brand New - Unopened, Pristine Condition</option>
+                                        <option value="new">Brand New - Unopened, Pristine Condition</option>
                                     </optgroup>
                                   
                                     <optgroup label="Used">
-                                      <option value="like_new">Like New - Barely Used, Looks New</option>
-                                      <option value="good">Good - Light Wear, Works Like a Charm</option>
-                                      <option value="fair">Fair - Noticeable Wear, Fully Functional</option>
-                                      <option value="poor">Poor - Heavily Used, Some Issues</option>
+                                        <option value="like_new">Like New - Barely Used, Looks New</option>
+                                        <option value="good">Good - Light Wear, Works Like a Charm</option>
+                                        <option value="fair">Fair - Noticeable Wear, Fully Functional</option>
+                                        <option value="poor">Poor - Heavily Used, Some Issues</option>
                                     </optgroup>
                                 </select>
                             </div>
@@ -123,19 +124,19 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
     </main>
+
     <footer>
         <p>&copy; 2025 SwapIt</p>
     </footer>
     <script>
         function home() {
             window.location.href = "index.html";
+        }
+
+        function triggerFilePicker() {
+            const fileInput = document.getElementById('fileInput');
+            fileInput.click();
         }
     </script>
 </body>

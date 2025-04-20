@@ -24,8 +24,8 @@
                 </div>
                 <input type="text" placeholder="Search for items...">
             </div>
-            <div class="plus-icon-container">
-                <i class="material-symbols-outlined plus-icon">add</i>
+            <div class="plus-icon-container" onclick="add()">
+                <i class="material-symbols-outlined plus-icon" >add</i>
             </div>
             <div class="user-icon-container">
                 <img src="img/user.jpg" alt="user">
@@ -1421,6 +1421,10 @@
     <script>
         function home() {
             window.location.href = "index.html";
+        }
+
+        function add(){
+            window.location.href = "create-post.html"
         }
     </script>
 </body>

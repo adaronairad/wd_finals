@@ -197,6 +197,7 @@ body {
 }
 
 .left-side {
+    cursor: pointer;
     height: 40%;
     width: 40%;
     border: 3px dashed #4caf50;
