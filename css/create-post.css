@@ -197,7 +197,7 @@ body {
 }
 
 .left-side {
-    height: auto;
+    height: 40%;
     width: 40%;
     border: 3px dashed #4caf50;
     border-radius: 20px;
@@ -234,7 +234,7 @@ body {
 
 .img-box i {
     padding: 40px 0;
-    font-size: 60px;
+    font-size: 90px;
 }
 
 .btn-container {
@@ -355,3 +355,44 @@ textarea:focus {
 textarea:hover {
     outline: 1px solid #4caf50;
 }   
+
+.meeting-spot-bar, .category-bar, .condition-bar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.meeting-spot-bar select, .category-bar select, .condition-bar select {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #f5f4fc;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+    padding-left: 20px;
+    border-radius: 50px;
+}
+
+.meeting-spot-bar select::placeholder, .category-bar select::placeholder, .condition-bar select::placeholder {
+    color: #666;
+}
+
+.meeting-spot-bar select:focus, .category-bar select:focus, .condition-bar select:focus {
+    outline: 1px solid #4caf50;
+}
+
+.meeting-spot-bar select:hover, .category-bar select:hover, .condition-bar select:hover {
+    outline: 1px solid #4caf50;
+}
+
+.meeting-spot-bar option, .category-bar option, .condition-bar option {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+}
