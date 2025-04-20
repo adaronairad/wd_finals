@@ -120,7 +120,7 @@
                                 </select>
                             </div>
                             <div class="buttons">
-                                <button class="cancel-btn" type="button">Cancel</button>
+                                <button class="cancel-btn" type="button" onclick="homepage()">Cancel</button>
                                 <button class="post-btn" type="submit">Post</button>
                             </div>
                         </div>
@@ -136,6 +136,10 @@
     <script>
         function home() {
             window.location.href = "index.html";
+        }
+
+        function homepage() {
+            window.location.href = "home.html";
         }
 
         function triggerFilePicker() {
