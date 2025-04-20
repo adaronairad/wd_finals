@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Post | SwapIt</title>
+    <link rel="stylesheet" href="css/create-post.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> 
+</head>
+<body>
+    <header>
+        <nav class="navbar-create-post">
+            <h1>SwapIt</h1>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Browse</a></li>
+            </ul>
+            <div class="search-bar-create-post">
+                <div class="search-icon-create-post">
+                    <i class="material-symbols-outlined search-icon">search</i>
+                </div>
+                <input type="text" placeholder="Search for items...">
+            </div>
+            <div class="plus-icon-container">
+                <i class="material-symbols-outlined plus-icon">add</i>
+            </div>
+            <div class="user-icon-container">
+                <img src="img/user.jpg" alt="user">
+            </div>
+            <div class="username">
+                <p>Adrian</p>
+            </div>
+            <div class="user-info">
+                <i class="material-symbols-outlined user-info-icon">keyboard_arrow_down</i>
+            </div>
+            <div class="messages">
+                <i class="material-symbols-outlined message-icon">mail</i>
+            </div>
+            <div class="notification">
+                <i class="material-symbols-outlined notification-icon">notifications</i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="create-post-section">
+            <div class="form">
+                <div class="create-post-title">
+                    <h2>Create a new post</h2>
+                </div>
+                <div class="form-content">
+                    <div class="left-side" onclick="triggerFilePicker()">
+                        <div class="left-side-box">
+                            <div class="img-box">
+                                <i class="material-symbols-outlined">image</i>
+                            </div>
+                            <div class="btn-container">
+                                <div class="upload-btn">
+                                    <i class="material-symbols-outlined plus-icon">add</i><span onclick="triggerFilePicker()">Add photos</span>
+                                    <input type="file" id="fileInput" style="display: none;" accept="image/*">
+                                </div>
+                            </div>
+                            <p>Add photos manually or drag and drop them here</p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="right-side-box">
+                            <p>Title</p>
+                            <div class="title-bar">
+                                <input type="text" placeholder="Enter title" required>
+                            </div>
+                            <p>Description</p>
+                            <div class="description-bar">
+                                <textarea class="description-text" placeholder="Describe your item" required></textarea>
+                            </div>
+                            <p>Select meeting spot</p>
+                            <div class="meeting-spot-bar">
+                                <select name="" id="" required>
+                                    <option value="" disabled>Select meeting spot</option>
+                                    <option value="">Main Campus</option>
+                                    <option value="">Campus B</option>
+                                    <option value="">Campus C</option>
+                                </select>
+                            </div>
+                            <p>Categories</p>
+                            <div class="category-bar">
+                                <select name="" id="" required>
+                                    <option value="" class="category-placeholder" disabled>Categories</option>
+                                    <option value="">Accessories</option>
+                                    <option value="">Art Supplies</option>
+                                    <option value="">Beauty</option>
+                                    <option value="">Clothing and Apparel</option>
+                                    <option value="">Electronics</option>
+                                    <option value="">Footwear</option>
+                                    <option value="">Gadgets</option>
+                                    <option value="">Office Supplies</option>
+                                    <option value="">Personal Care</option>
+                                    <option value="">School Bags</option>
+                                    <option value="">Stationery</option>
+                                    <option value="">Textbooks</option>
+                                </select>
+                            </div>
+                            <p>Condition</p>
+                            <div class="condition-bar">
+                                <select name="" id="" required>
+                                    <option value="" disabled selected>Select Condition</option>
+
+                                    <optgroup label="New">
+                                        <option value="new">Brand New - Unopened, Pristine Condition</option>
+                                    </optgroup>
+                                  
+                                    <optgroup label="Used">
+                                        <option value="like_new">Like New - Barely Used, Looks New</option>
+                                        <option value="good">Good - Light Wear, Works Like a Charm</option>
+                                        <option value="fair">Fair - Noticeable Wear, Fully Functional</option>
+                                        <option value="poor">Poor - Heavily Used, Some Issues</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="buttons">
+                                <button class="cancel-btn" type="button" onclick="homepage()">Cancel</button>
+                                <button class="post-btn" type="submit">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SwapIt</p>
+    </footer>
+    <script>
+        function home() {
+            window.location.href = "index.html";
+        }
+
+        function homepage() {
+            window.location.href = "home.html";
+        }
+
+        function triggerFilePicker() {
+            const fileInput = document.getElementById('fileInput');
+            fileInput.click();
+        }
+    </script>
+</body>
+

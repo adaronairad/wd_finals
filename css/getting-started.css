@@ -50,7 +50,7 @@
 }
 
 .getting-started-form .bar {
-    width: 70%;
+    width: 500px;
     padding: 15px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -91,7 +91,7 @@
 .btn-container .continue-btn, .btn-container .skip-btn {
     font-family: 'Lato', sans-serif;
     font-size: 20px !important;
-    width: 40%;
+    width: 200px;
     padding: 15px;
     margin-bottom: 15px;
     margin-right: 20px;
@@ -157,3 +157,42 @@
 }
 
 /* end of profile pic*/
+
+@media screen and (max-width: 1200px) {
+    .getting-started {
+        width: 100%;
+        height: 110vh !important;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        background-image: url(../img/img-3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .getting-started .form {
+        margin-left: 0px;
+        width: 50%;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 40%;
+        margin-top: 50px;
+    }
+
+    .continue-btn {
+        margin: 0;
+    }
+     
+
+
+
+    
+}

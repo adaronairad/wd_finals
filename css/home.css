@@ -9,40 +9,40 @@ body {
     background-color: #f0f0f0;
 }
 
-.navbar {
+.navbar-home {
+    justify-content: space-evenly;
+    background-color: #aed5a7;
     display: flex;
-    color: white;
     padding: 5px 0;
     position: fixed;
     top: 0;
     width: 100%;
     height: 80px;
-    background: white;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar h1 {
+.navbar-home h1 {
     padding: 10px 20px;
     font-size: 35px;
     color: #333;  
     cursor: pointer; 
 }
 
-.navbar ul {
+.navbar-home ul {
     padding: 20px;
     list-style: none;
     display: flex;
 }
 
-.navbar ul li a {
+.navbar-home ul li a {
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-decoration: none;
     color: white;
     padding: 20px 20px;
-    color: #333;
+    color: whitesmoke;
 }
 
 
@@ -82,6 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 50px;
+    min-width: 50px;
     height: 50px;
     background-color: #4caf50;
     border-radius: 50%;
@@ -94,37 +95,145 @@ body {
     color: #fff;
 }
 
-.user-icon-container {
+
+/* User Dropdown */
+.user-dropdown {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user-dropdown-icon {
+    transition: transform 0.3s ease;
+}
+
+.user-dropdown-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.user-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-dropdown-img {
     width: 50px;
     height: 50px;
-    background-color: #4caf50;
     border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.user-dropdown-name {
+    font-weight: bold;
     color: #333;
-    cursor: pointer;
-    margin: 10px 0 0 10px;
+    margin: 0;
 }
 
-.user-icon {
-    color: #fff;
-}
-
-.username {
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
+.user-dropdown-icon {
     font-size: 20px;
-    text-decoration: none;
     color: #333;
-    margin: 20px 10px;
 }
+
+.user-dropdown-menu {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    top: 90px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 300px;
+    padding: 20px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.user-dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.user-dropdown-profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-dropdown-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    margin: 0 auto 10px;
+}
+
+.user-dropdown-fullname {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.user-dropdown-username {
+    font-size: 14px;
+    color: #777;
+}
+
+.user-dropdown-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-dropdown-stats div {
+    font-size: 14px;
+    color: #555;
+}
+
+.user-dropdown-stats div p:first-child {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.user-dropdown-settings button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.user-dropdown-settings button:hover {
+    background-color: #45a049;
+}
+
+
 
 .messages {
     border-radius: 50%;
-    color: #333;
+    color: white;
     cursor: pointer;
     margin: 20px 10px;
+}
+
+.messages i {
+    font-size: 30px;
 }
 
 .messages:hover{
@@ -133,9 +242,13 @@ body {
 
 .notification {
     border-radius: 50%;
-    color: #333;
+    color: white;
     cursor: pointer;
     margin: 20px 10px;
+}
+
+.notification i {
+    font-size: 30px;
 }
 
 .notification:hover{
@@ -148,14 +261,358 @@ body {
     align-items: center;
     width: 50px;
     height: 50px;
-    color: #333;
+    color: white;
     cursor: pointer;
     margin: 20px 0 20px 0;
 }
 
+.collection-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    background-color: white;
+}
+
+.collections {
+    margin: 120px 0 0 20px;
+    width: 50px;
+    height: 50px;
+    color: #333;
+    cursor: pointer;
+}
+
+.collections h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    padding-top: 20px;
+}
+
+.card-container::-webkit-scrollbar {
+    height: 5px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background: #e1dee1;
+    border-radius: 4px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    min-width: 280px;
+    max-width: 200px;
+    height: 120px;
+    background-color: #e7f9e9;
+    border-radius: 25px;
+    flex-shrink: 0;
+    border: 1px solid #cacaca;
+    cursor: pointer;
+}
+
+.card-content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card-content img {
+    margin: 0 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.card-info h2 {
+    margin: 0 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+/*end of collections --------------------------------------------------------------------------------*/
+
+.trending-section{
+    background-color: #e7f9e9;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+}
+
+.trending {
+    margin: 10px 0 0 20px;
+    width: 50px;
+    height: 50px;
+    color: #333;
+    cursor: pointer;
+}
+
+.trending h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+.trending-card-container {
+    height: 290px;
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 16px;
+    scroll-behavior: smooth;
+    padding-top: 20px;
+}
+
+.trending-card-container::-webkit-scrollbar {
+    height: 5px;
+}
+
+.trending-card-container::-webkit-scrollbar-thumb {
+    background: #e1dee1;
+    border-radius: 4px;
+}
+
+.trending-card {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    border-radius: 25px;
+    flex-shrink: 0;
+}
+
+.trending-card-content{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.trending-card-content:hover h2{
+    text-decoration: underline;
+}
 
 
+.trending-card-img {
+    width: inherit;
+}
 
+.trending-card-content img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.trending-card-content:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.trending-card-content:hover .heart-icon {
+    opacity: 1;
+}
+
+.heart-icon {
+    background-color: #6666665d;
+    padding: 5px 3px 1px 3px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+.trending-card-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.trending-card-info h2 {
+    font-size: 16px;
+    margin: 10px 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.other-info{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.other-info i {
+    font-size: 16px;
+    color: #666;
+}
+
+.other-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0 15px 0 5px;
+}
+
+/*end of trending section --------------------------------------------------------------------------------*/
+.listing-section{
+    background-color: white;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 40px;
+    padding-top: 40px;
+}
+
+.grid-item {
+    cursor: pointer;
+    justify-self: center;
+    width: 170px;
+    color: white;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.grid-item-content{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item-content:hover h2{
+    text-decoration: underline;
+}
+
+.grid-item-content:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.grid-item-content:hover .heart-icon {
+    opacity: 1;
+}
+
+.grid-item-content img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.grid-item-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item-info h2 {
+    text-align: left;
+    max-lines: 3;
+    font-size: 16px;
+    margin: 10px 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.grid-other-info{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-other-info i {
+    font-size: 16px;
+    color: #666;
+}
+
+.grid-other-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0 15px 0 5px;
+}
+
+/*end of grid section*/
+
+.collection-info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    margin-top: 80px;
+    background-color: #e7f9e9;
+
+}
+
+.accessories-collection {
+    width: 100%;
+    display: flex;
+}
+
+.left-collection-info {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 40%;
+    height: 70vh;
+}
+
+.left-collection-info img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.right-collection-info {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 60%;
+    height: 70vh;
+}
+
+.accessories-info{
+    width: 65%;
+}
+
+.accessories-info h1 {
+    color: #333;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.accessories-info p {
+    text-align: justify;
+    color: #666;
+}
 
 
 
@@ -163,17 +620,39 @@ footer{
     display: flex;
     justify-content: center;
     background-color: white;
+    height: 40px;
+    align-items: end;
 }  
 
-
-
-@media screen and (max-width: 768px) {
-    .about .about-us {
-      max-width: 100% !important;
-      padding: 100px 40px !important;
+  @media screen and (max-width: 1048px) {
+    .search-bar-home{
+        width: 50%;
     }
-
-    .navbar ul {
+    .navbar-home ul {
         display: none;
     }
+
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
   }
+
+@media screen and (max-width: 870px) {
+    .navbar-home ul {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .navbar-home ul {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar-create-post {
+    background-color: #aed5a7;
+    display: flex;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-create-post h1 {
+    padding: 10px 20px;
+    font-size: 35px;
+    color: #333;  
+    cursor: pointer; 
+}
+
+.navbar-create-post ul {
+    padding: 20px;
+    list-style: none;
+    display: flex;
+}
+
+.navbar-create-post ul li a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 20px 20px;
+    color: whitesmoke;
+}
+
+
+.search-bar-create-post {
+    background-color: white;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    padding: 10px 15px;
+    margin-top: 10px;
+    height: 50px;
+    width: 40%;
+    border: 1px solid #ccc;
+}
+.search-bar-create-post input {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    width: 100%;
+    padding-left: 10px;
+    background-color: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-bar-create-post input::placeholder {
+    color: #ccc;
+}
+
+.search-icon {
+    margin-left: 5px;
+    color: #333;
+}
+
+.plus-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+}
+
+.plus-icon {
+    color: #fff;
+}
+
+.user-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+}
+
+.user-icon-container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-icon {
+    color: #fff;
+}
+
+.username {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    margin: 20px 10px;
+}
+
+.messages {
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+
+.messages:hover{
+    color: #4CAF50;
+}
+
+.notification {
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+
+.notification:hover{
+    color: #4CAF50;
+}
+
+.user-info-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    margin: 20px 0 20px 0;
+}
+
+.create-post-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    width: 100%;
+    background-color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.create-post-title {
+    width: 100%;
+}
+
+.create-post-title h2 {
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-content {
+    display: flex;
+    width: 100%;
+}
+
+.left-side {
+    cursor: pointer;
+    height: 40%;
+    width: 40%;
+    border: 3px dashed #4caf50;
+    border-radius: 20px;
+}
+
+.left-side:hover{
+    border: 3px solid #4caf50;
+
+}
+
+.left-side-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.left-side-box p {
+    text-align: center;
+    width: 70%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.img-box i {
+    padding: 40px 0;
+    font-size: 90px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+
+.upload-btn {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 100%;
+    height: 50px;
+}
+
+.upload-btn:hover {
+    background-color: #45a049;
+}
+
+.upload-btn span {
+    padding: 5px 20px 5px 0;
+}
+
+.plus-icon {
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+}
+
+.right-side {
+    width: 60%;
+    padding-left: 20px;
+}
+
+.right-side-box p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.title-bar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title-bar input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #f5f4fc;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+    padding-left: 20px;
+    border-radius: 50px;
+}
+
+.title-bar input::placeholder {
+    color: #666;
+}
+
+.title-bar input:focus {
+    outline: 1px solid #4caf50;
+}
+
+.title-bar input:hover {
+    outline: 1px solid #4caf50;
+}
+
+.description-bar {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #f5f4fc;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+    padding: 10px 20px 10px;
+    border-radius: 20px;
+}
+
+textarea::placeholder {
+    color: #666;
+}
+
+textarea:focus {
+    outline: 1px solid #4caf50;
+}
+
+textarea:hover {
+    outline: 1px solid #4caf50;
+}   
+
+.meeting-spot-bar, .category-bar, .condition-bar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.meeting-spot-bar select, .category-bar select, .condition-bar select {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #f5f4fc;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+    padding-left: 20px;
+    padding-right: 30px;
+    border-radius: 50px;
+    appearance: none;
+    background-image: url(../img/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.meeting-spot-bar select::placeholder, .category-bar select::placeholder, .condition-bar select::placeholder {
+    color: #666;
+}
+
+.meeting-spot-bar select:focus, .category-bar select:focus, .condition-bar select:focus {
+    outline: 1px solid #4caf50;
+}
+
+.meeting-spot-bar select:hover, .category-bar select:hover, .condition-bar select:hover {
+    outline: 1px solid #4caf50;
+}
+
+.meeting-spot-bar option, .category-bar option, .condition-bar option {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 8px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    width: 120px;
+    height: 50px;
+}
