@@ -1,0 +1,707 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+:root{
+    --primary-color: #4CAF50;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.sidebar{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    overflow-x: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.sidebar ul li{
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar ul li a .title1{
+    color:var(--primary-color);
+}
+
+.sidebar ul li :hover{
+    border-radius: 3rem;
+    background:var(--primary-color);
+    color: #fff;
+}
+
+.sidebar ul li:first-child{
+    color:var(--primary-color);
+    line-height: 60px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(176, 176, 176);
+}
+
+.sidebar ul li:first-child :hover{
+    background: none;
+}
+
+.sidebar ul li .title1 :hover{
+    background: none;
+    color: var(--primary-color);
+
+}
+
+
+.sidebar ul li a{
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i{
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.sidebar .title{
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.title1{
+    padding: 0 60px;
+    font-size: 30px;
+    color: var(--primary-color) ;
+}
+
+.title1 :hover{
+    background: none;
+}
+
+.title1 span{
+    font-size: 30px;
+    color:var(--primary-color);
+}
+
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    left: 300px;
+    background-color: #f5f5f5;
+}
+
+.navbar-home {
+    justify-content: space-evenly;
+    background-color: #aed5a7;
+    display: flex;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-home h1 {
+    padding: 10px 20px;
+    font-size: 35px;
+    color: #333;  
+    cursor: pointer; 
+}
+
+.navbar-home ul {
+    padding: 20px;
+    list-style: none;
+    display: flex;
+}
+
+.navbar-home ul li a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 20px 20px;
+    color: whitesmoke;
+}
+
+
+.search-bar-home {
+    background-color: white;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    padding: 10px 15px;
+    margin-top: 10px;
+    height: 50px;
+    width: 40%;
+    border: 1px solid #ccc;
+}
+.search-bar-home input {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    width: 100%;
+    padding-left: 10px;
+    background-color: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-bar-home input::placeholder {
+    color: #ccc;
+}
+
+.search-icon {
+    margin-left: 5px;
+    color: #333;
+}
+
+.plus-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    margin: 10px 0 0 10px;
+}
+
+.plus-icon {
+    color: #fff;
+}
+
+
+/* User Dropdown */
+.user-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user-dropdown-icon {
+    transition: transform 0.3s ease;
+}
+
+.user-dropdown-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.user-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-dropdown-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.user-dropdown-name {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.user-dropdown-icon {
+    font-size: 20px;
+    color: #333;
+}
+
+.user-dropdown-menu {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    top: 90px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 300px;
+    padding: 20px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.user-dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.user-dropdown-profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-dropdown-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    margin: 0 auto 10px;
+}
+
+.user-dropdown-fullname {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.user-dropdown-username {
+    font-size: 14px;
+    color: #777;
+}
+
+.user-dropdown-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-dropdown-stats div {
+    font-size: 14px;
+    color: #555;
+}
+
+.user-dropdown-stats div p:first-child {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.user-dropdown-settings button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.user-dropdown-settings button:hover {
+    background-color: #45a049;
+}
+
+
+
+.messages {
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+
+.messages i {
+    font-size: 30px;
+}
+
+.messages:hover{
+    color: #4CAF50;
+}
+
+.notification {
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+
+.notification i {
+    font-size: 30px;
+}
+
+.notification:hover{
+    color: #4CAF50;
+}
+
+.user-info-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    margin: 20px 0 20px 0;
+}
+
+  
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 90px 20px 20px 20px;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+}
+  
+
+.menu-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+}
+
+.menu-card:hover{
+    background:#cecece;
+
+}
+
+.menu-card .picture {
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.menu-card .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.menu-card h3 {
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 0 10px;
+    word-wrap: break-word;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-card .menu-options {
+    margin-top: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#card6 h3, #card7 h3{
+    padding-top: 5px;
+    line-height: 20px;
+}
+
+#card6 .price, #card7 .price{
+    margin-top: 0px;
+    margin-bottom: 13px;
+}
+  
+  
+.menu-card p {
+    margin: 15px 0;
+}
+  
+.menu-card button {
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+    height: 35px;
+    width: 75px;
+    transition: all 0.3s;
+}
+  
+.menu-card button:hover {
+    background-color: rgb(35, 89, 45);
+    transform: translateY(-2px);
+}
+  
+/* Add Card */
+.add-card {
+    border: 1px dashed #333;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+}
+  
+.add-card:hover {
+    background-color: #f0f0f0;
+}
+/* Modal Styles */
+.modal-edit {
+    display: none; /* Hidden by default */
+    position:fixed;
+    padding-top: 75px;
+    padding-left: 30%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-delete {
+    display: none; /* Hidden by default */
+    position:fixed;
+    padding-top: 75px;
+    padding-left: 10%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+  
+.modal-content-edit {
+    background-color: white;
+    padding: 20px;
+    border-radius: 1rem;
+    width: 50%;
+}
+  
+.modal-content-delete {
+    background-color: white;
+    padding: 20px;
+    border-radius: 1rem;
+    width: 400px;
+    height: 150px;
+}
+
+.modal-content-delete button{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 90px;
+}
+
+.delete-button{
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+}
+  
+form label {
+    margin-top: 10px;
+}
+  
+form input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+}
+  
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+  
+form button:hover {
+    background-color:rgb(70, 28, 23);
+}
+
+/* Notification Container Styles */
+.notification-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.notification-container.show {
+    opacity: 1;
+}
+
+.notification-content {
+    text-align: center;
+}
+
+.notification-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.notification-content p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.notification-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.notification-buttons button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    min-width: 100px;
+}
+
+.notification-buttons button:first-child {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.notification-buttons button:first-child:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.notification-buttons button:last-child {
+    background-color: #f44336;
+    color: white;
+}
+
+.notification-buttons button:last-child:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+.menu-card button:last-child {
+    background-color: #f44336;
+}
+
+.menu-card button:last-child:hover {
+    background-color: #d32f2f;
+}
+
+/* Image Modal Styles */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+}
+
+.close-image-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-image-modal:hover {
+    color: #bbb;
+}
+
+/* Add cursor pointer to menu card images */
+.menu-card .picture img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-card .picture img:hover {
+    transform: scale(1.05);
+}
