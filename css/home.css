@@ -652,7 +652,7 @@ body {
 
 .item-info-pic-big{
     width: 75%;
-    height: auto;
+    height: 450px;
     margin-right: 20px;
 }
 
@@ -661,6 +661,36 @@ body {
     height: 100%;
     border-radius: 20px;
 }
+
+.posting-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px 0 0;
+}
+
+.posting-info p {
+    color: #666;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.posting-info-favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    color: #333;
+    cursor: pointer;
+}
+
+.posting-info-favorite i {
+    font-size: 25px;
+    padding-right: 20px;
+    color: #666;
+}
+
 
 .right-item-info {
     display: flex;
@@ -745,6 +775,45 @@ body {
 
 }
 
+.item-condition {
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    padding: 0 30px 0 30px;
+}
+
+.item-condition h2 {
+    color: #333;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.item-condition p {
+    color: #666;
+    font-size: 20px;
+    padding: 20px 30px;
+
+}
+
+.item-meeting-spot {
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    padding: 0 30px 0 30px;
+}
+
+.item-meeting-spot h2 {
+    color: #333;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.item-meeting-spot p {
+    color: #666;
+    font-size: 20px;
+    padding: 20px 30px;
+
+}
 
 
 
