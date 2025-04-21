@@ -32,7 +32,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--sidebar-bg);
+    background-color: #a7e0a9;
     padding: 0.5rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -79,31 +79,34 @@ body {
 }
 
 .header-icons i {
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.747);
     font-size: 1.2rem;
     cursor: pointer;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.767);
 }
 
 .user-icon {
     width: 32px;
     height: 32px;
-    background-color: #a7e0a9;
+    background-color: #4caf50;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid white;
 }
 
 .user-icon i {
     color: white;
     font-size: 16px;
+    -webkit-text-stroke: 0.5px white;
 }
 
 .logo-text {
     display: inline-block;
     padding: 10px 20px;
     font-size: 30px;
-    color: #333;
+    color: white;
     cursor: pointer;
 }
 
@@ -149,8 +152,8 @@ body {
     display: inline-block;
     padding: 10px 20px;
     font-size: 30px;
-    color: #333;  
-    cursor: pointer; 
+    color: white;
+    cursor: pointer;
 }
 
 .nav-menu {
