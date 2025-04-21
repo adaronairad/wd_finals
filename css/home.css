@@ -45,6 +45,14 @@ body {
     color: whitesmoke;
 }
 
+.navbar-home ul li a:hover {
+    color: white;
+    text-decoration-color: #4CAF50 !important;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
+
 
 .search-bar-home {
     background-color: white;
@@ -84,7 +92,7 @@ body {
     width: 50px;
     min-width: 50px;
     height: 50px;
-    background-color: #4caf50;
+    background-color: #4caf4f4a;
     border-radius: 50%;
     color: #333;
     cursor: pointer;
@@ -315,11 +323,17 @@ body {
     min-width: 280px;
     max-width: 200px;
     height: 120px;
-    background-color: #e7f9e9;
+    background-color: #e2f3d1;
     border-radius: 25px;
     flex-shrink: 0;
     border: 1px solid #cacaca;
     cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .card-content{
@@ -344,7 +358,11 @@ body {
 /*end of collections --------------------------------------------------------------------------------*/
 
 .trending-section{
-    background-color: #e7f9e9;
+    /*background-color: #e7f9e9;*/
+    background-image: url('../img/img-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -568,7 +586,7 @@ body {
     width: 100%;
     height: 70vh;
     margin-top: 80px;
-    background-color: #e7f9e9;
+    background-color: #e2f3d1;
 
 }
 
@@ -586,8 +604,8 @@ body {
 }
 
 .left-collection-info img {
-    width: 250px;
-    height: 250px;
+    width: 290px;
+    height: 290px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }

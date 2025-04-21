@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapIt - Reports Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="reports.css">
+    </head>
+<body>
+    <header class="top-header">
+        <a href="./dashboard.html" class="logo-text" style="text-decoration: none;">SwapIt</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search reports">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="header-icons">
+            <i class="far fa-envelope"></i>
+            <i class="far fa-bell"></i>
+            <div class="user-icon">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="./dashboard.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        Dashboard Overview
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        User Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-list"></i>
+                        Item Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./reports.html" class="nav-link active">
+                        <i class="fas fa-chart-bar"></i>
+                        Reports
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <h1>Reports Management</h1>
+            </div>
+
+            <div class="reports-container">
+                <!-- User Report Card -->
+                <div class="report-card">
+                    <div class="report-header">
+                        <div class="report-type">
+                            <i class="fas fa-user-shield"></i>
+                            <span>User Report</span>
+                        </div>
+                        <span class="report-status status-pending">Pending</span>
+                    </div>
+                    <div class="report-content">
+                        <h3>Suspicious User Activity</h3>
+                        <p>Multiple users have reported suspicious behavior from this account, including potential scam attempts.</p>
+                    </div>
+                    <div class="report-meta">
+                        <span>Reported User: @john_doe</span>
+                        <span>2 hours ago</span>
+                    </div>
+                    <div class="report-actions">
+                        <button class="action-btn resolve-btn">
+                            <i class="fas fa-check"></i> Resolve
+                        </button>
+                        <button class="action-btn delete-btn">
+                            <i class="fas fa-ban"></i> Ban User
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item Report Card -->
+                <div class="report-card">
+                    <div class="report-header">
+                        <div class="report-type">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Item Report</span>
+                        </div>
+                        <span class="report-status status-pending">Pending</span>
+                    </div>
+                    <div class="report-content">
+                        <h3>Prohibited Item Listing</h3>
+                        <p>Item listing contains prohibited content that violates our community guidelines.</p>
+                    </div>
+                    <div class="report-meta">
+                        <span>Item ID: #12345</span>
+                        <span>1 day ago</span>
+                    </div>
+                    <div class="report-actions">
+                        <button class="action-btn resolve-btn">
+                            <i class="fas fa-check"></i> Resolve
+                        </button>
+                        <button class="action-btn delete-btn">
+                            <i class="fas fa-trash"></i> Remove Item
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Resolved Report Card -->
+                <div class="report-card">
+                    <div class="report-header">
+                        <div class="report-type">
+                            <i class="fas fa-user-shield"></i>
+                            <span>User Report</span>
+                        </div>
+                        <span class="report-status status-resolved">Resolved</span>
+                    </div>
+                    <div class="report-content">
+                        <h3>Harassment Report</h3>
+                        <p>User reported for sending inappropriate messages. Account has been temporarily suspended.</p>
+                    </div>
+                    <div class="report-meta">
+                        <span>Reported User: @user123</span>
+                        <span>3 days ago</span>
+                    </div>
+                    <div class="report-actions">
+                        <button class="action-btn resolve-btn" disabled>
+                            <i class="fas fa-check"></i> Resolved
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+        <script src="reports.js"></script>
+</body>
+</html> 
