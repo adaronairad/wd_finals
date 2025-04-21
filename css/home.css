@@ -25,7 +25,7 @@ body {
 .navbar-home h1 {
     padding: 10px 20px;
     font-size: 35px;
-    color: #333;  
+    color: whitesmoke;
     cursor: pointer; 
 }
 
@@ -128,14 +128,15 @@ body {
 }
 
 .user-dropdown-name {
-    font-weight: bold;
-    color: #333;
+    font-weight: 500;
+    font-size: 20px;
+    color: whitesmoke;
     margin: 0;
 }
 
 .user-dropdown-icon {
     font-size: 20px;
-    color: #333;
+    color: whitesmoke;
 }
 
 .user-dropdown-menu {
