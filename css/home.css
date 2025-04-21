@@ -25,7 +25,7 @@ body {
 .navbar-home h1 {
     padding: 10px 20px;
     font-size: 35px;
-    color: #333;  
+    color: whitesmoke;
     cursor: pointer; 
 }
 
@@ -128,14 +128,15 @@ body {
 }
 
 .user-dropdown-name {
-    font-weight: bold;
-    color: #333;
+    font-weight: 500;
+    font-size: 20px;
+    color: whitesmoke;
     margin: 0;
 }
 
 .user-dropdown-icon {
     font-size: 20px;
-    color: #333;
+    color: whitesmoke;
 }
 
 .user-dropdown-menu {
@@ -612,6 +613,246 @@ body {
 .accessories-info p {
     text-align: justify;
     color: #666;
+}
+/*end of accessories section page*********************************************************************************/
+
+.item-info {
+    background-color: white;
+    width: 100%;
+    height: 130vh;
+    margin-top: 80px;
+    display: flex;
+}
+
+.left-item-info {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.item-info-pic {
+    margin-left: 20px;
+    width: 90px;
+    height: 90px;
+}
+
+.item-info-pic img:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 5px solid #4CAF50;
+    margin: 0 0 10px 0;
+}
+
+.item-info-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 0 0 10px 0;
+}
+
+.item-info-pic-big{
+    width: 75%;
+    height: 450px;
+    margin-right: 20px;
+}
+
+.item-info-pic-big img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.posting-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px 0 0;
+}
+
+.posting-info p {
+    color: #666;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.posting-info-favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    color: #333;
+    cursor: pointer;
+}
+
+.posting-info-favorite i {
+    font-size: 25px;
+    padding-right: 20px;
+    color: #666;
+}
+
+.traded-by {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;}
+
+.posting-user {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.posting-user img {
+    cursor: pointer;
+    outline: 2px solid #4CAF50;
+    margin-right: 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.posting-user p {
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+    font-weight: 600;
+}
+
+.posting-user p:hover {
+    text-decoration: underline;
+}
+
+.right-item-info {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding-top: 30px;
+}
+
+.right-item-info h1 {
+    color: #333;
+    font-size: 40px;
+    font-weight: 800;
+    padding: 20px 0 10px 30px;
+}
+
+.start-chat-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 20px 30px 0 30px;
+}
+
+.start-chat-btn button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.start-chat-btn button:hover {
+    background-color: #45a049;
+}
+
+.start-chat-btn i {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.item-description {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 30px 0 30px;
+}
+
+.item-description h2 {
+    color: #333;
+    font-size: 20px;
+    padding: 20px 0 10px 0;
+}
+
+.item-description p {
+    color: #666;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.item-category {
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    padding: 10px 30px 0 30px;
+}
+
+.item-category h2 {
+    color: #333;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.item-category p {
+    color: #666;
+    font-size: 20px;
+    padding: 20px 30px;
+
+}
+
+.item-condition {
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    padding: 0 30px 0 30px;
+}
+
+.item-condition h2 {
+    color: #333;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.item-condition p {
+    color: #666;
+    font-size: 20px;
+    padding: 20px 30px;
+
+}
+
+.item-meeting-spot {
+    display: flex;
+    text-align: justify;
+    width: 100%;
+    padding: 0 30px 0 30px;
+}
+
+.item-meeting-spot h2 {
+    color: #333;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.item-meeting-spot p {
+    color: #666;
+    font-size: 20px;
+    padding: 20px 30px;
+
 }
 
 

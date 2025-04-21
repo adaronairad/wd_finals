@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="order.css" />
+    <link rel="stylesheet" href="Admin/item-management-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> 
+    <title>Orders</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="title1">SwapIt</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.html">
+                        <div class="title">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="menu.html">
+                        <div class="title">Menu Management</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="order.html">
+                        <div class="title">Order Management</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <div class="title">User Management</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="reviews.html">
+                        <div class="title">Feedback</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="title">Settings</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="navbar-home">
+            <h1 onclick="location.href='home.html'">SwapIt</h1>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#contact">Browse</a></li>
+            </ul>
+            <div class="search-bar-home">
+                <div class="search-icon-home">
+                    <i class="material-symbols-outlined search-icon">search</i>
+                </div>
+                <input type="text" placeholder="Search for items...">
+            </div>
+            <div class="plus-icon-container" onclick="location.href='create-post.html'">
+                <i class="material-symbols-outlined plus-icon" >add</i>
+            </div>
+            <div class="user-dropdown">
+                <div class="user-dropdown-trigger" onclick="toggleUserDropdown()">
+                    <img src="img/user.jpg" alt="user" class="user-dropdown-img">
+                    <p class="user-dropdown-name">Adrian</p>
+                    <i class="material-symbols-outlined user-dropdown-icon">keyboard_arrow_down</i>
+                </div>
+                <div class="user-dropdown-menu" id="userDropdownMenu">
+                    <div class="user-dropdown-profile">
+                        <div class="user-dropdown-avatar">
+                            <p>A</p>
+                        </div>
+                        <p class="user-dropdown-fullname">Adrian</p>
+                        <p class="user-dropdown-username">@adrianorada</p>
+                    </div>
+                    <div class="user-dropdown-stats">
+                        <div>
+                            <p>0</p>
+                            <p>trades</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>followers</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>following</p>
+                        </div>
+                    </div>
+                    <div class="user-dropdown-settings">
+                        <button onclick="openSettings()">Settings</button>
+                    </div>
+                </div>
+            </div>
+            <div class="messages">
+                <i class="material-symbols-outlined message-icon">mail</i>
+            </div>
+            <div class="notification">
+                <i class="material-symbols-outlined notification-icon">notifications</i>
+            </div>
+        </nav>
+
+            <div class="menu-container">
+                
+                <div class="menu-card" id="card1">
+                    <div class="picture">
+                        <img src="img/accessories-1.jpg" alt="accessory-1">
+                    </div>
+                    <h3>Womens Headbands</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card1')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card1')">Delete</button>
+                    </div>
+                </div>
+        
+                <div class="menu-card" id="card2">
+                    <div class="picture">
+                        <img src="img/art-supplies-1.jpg" alt="art-supplies">
+                    </div>
+                    <h3>Crayon, Brush and Water Color</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card2')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card2')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card3">
+                    <div class="picture">
+                        <img src="img/beauty-1.jpg" alt="beauty-product-1">
+                    </div>
+                    <h3>Beauty Products Set</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card3')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card3')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card4">
+                    <div class="picture">
+                        <img src="img/electronics-1.jpg" alt="ram">
+                    </div>
+                    <h3>Ramaxel RAM 4GB</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card4')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card4')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card5">
+                    <div class="picture">
+                        <img src="img/footwear-1.jpg" alt="nike">
+                    </div>
+                    <h3>Nike Lunar Force 1 Shoes</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card5')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card5')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card6">
+                    <div class="picture">
+                        <img src="img/footwear-3.jpg" alt="Ice-cream">
+                    </div>
+                    <h3>Sasha Womens Sandals</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card6')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card6')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card7">
+                    <div class="picture">
+                        <img src="img/gadgets-1.jpg" alt="mouse">
+                    </div>
+                    <h3>Havit Wired Gaming Mouse</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card7')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card7')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card8">
+                    <div class="picture">
+                        <img src="img/gadgets-3.jpg" alt="camera">
+                    </div>
+                    <h3>Fujifilm Digital Camera</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card8')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card8')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card9">
+                    <div class="picture">
+                        <img src="img/gadgets-5.jpg" alt="smart-watch">
+                    </div>
+                    <h3>Huawei Smart Watch</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card9')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card9')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card10">
+                    <div class="picture">
+                        <img src="img/office-supplies-1.jpg" alt="stapler">
+                    </div>
+                    <h3>Swingline Heavy Duty Stapler</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card10')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card10')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card11">
+                    <div class="picture">
+                        <img src="img/office-supplies-2.jpg" alt="tape-container">
+                    </div>
+                    <h3>Tape Dispenser</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card11')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card11')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card12">
+                    <div class="picture">
+                        <img src="img/pens.jpg" alt="pens">
+                    </div>
+                    <h3>Picked Up Pens</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card12')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card12')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card13">
+                    <div class="picture">
+                        <img src="img/school-bags-2.jpg" alt="red-bag">
+                    </div>
+                    <h3>Cute YT Kids Backpack</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card13')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card13')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card14">
+                    <div class="picture">
+                        <img src="img/school-bags-4.jpg" alt="women-bag">
+                    </div>
+                    <h3>Floral Bag for Women</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card14')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card14')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card15">
+                    <div class="picture">
+                        <img src="img/textbooks-5.jpg" alt="textbook">
+                    </div>
+                    <h3>International Law Textbook</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card15')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card15')">Delete</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" id="card16">
+                    <div class="picture">
+                        <img src="img/clothing-and-apparel-3.jpg" alt="sweater">
+                    </div>
+                    <h3>Knitted Sweater for Women</h3>
+                    <div class="menu-options">
+                        <button onclick="openEditMenuModal('card16')">Approve</button>
+                        <button onclick="confirmDeleteMenuItem('card16')">Delete</button>
+                    </div>
+                </div>
+        
+            </div>
+        
+        </div>
+    </div>
+
+
+    <div class="modal-delete" id="deleteModal">
+        <div class="modal-content-delete">
+            <span class="close" onclick="closeDeleteModal()">&times;</span> <!-- Close button -->
+            <h2>Delete Confirmation</h2>
+            <p>Are you sure you want to delete this item?</p>
+            <div class="delete-button">
+                <button onclick="confirmDelete()">Delete</button> <!-- Confirm delete -->
+                <button onclick="closeDeleteModal()">Cancel</button> <!-- Cancel delete -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this before the closing body tag -->
+    <div class="notification-container" id="notificationContainer">
+        <div class="notification-content">
+            <h3 id="notificationTitle"></h3>
+            <p id="notificationMessage"></p>
+            <div class="notification-buttons">
+                <button id="notificationConfirm">Confirm</button>
+                <button id="notificationCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <span class="close-image-modal">&times;</span>
+        <img class="modal-content" id="enlargedImage">
+    </div>
+
+    <script>
+        let currentAction = null;
+        let currentCardId = null;
+        let deleteCardId = null;
+
+        function toggleUserDropdown() {
+            const dropdownMenu = document.getElementById('userDropdownMenu');
+            const dropdownIcon = document.querySelector('.user-dropdown-icon');
+            dropdownMenu.classList.toggle('show');
+            dropdownIcon.classList.toggle('rotate');
+        }
+
+        function showNotification(title, message, action, cardId) {
+            currentAction = action;
+            currentCardId = cardId;
+            document.getElementById('notificationTitle').textContent = title;
+            document.getElementById('notificationMessage').textContent = message;
+            document.getElementById('notificationContainer').classList.add('show');
+        }
+
+        function hideNotification() {
+            document.getElementById('notificationContainer').classList.remove('show');
+            currentAction = null;
+            currentCardId = null;
+        }
+
+        function handleNotificationConfirm() {
+            if (currentAction === 'approve') {
+                const menuCard = document.getElementById(currentCardId);
+                const menuName = menuCard.querySelector("h3").innerText;
+                // Here you would typically add code to update the backend/database
+                showNotification('Success', `"${menuName}" has been approved successfully!`, null, null);
+                setTimeout(hideNotification, 2000);
+            } else if (currentAction === 'delete') {
+                const card = document.getElementById(currentCardId);
+                const menuName = card.querySelector("h3").innerText;
+                card.parentNode.removeChild(card);
+                showNotification('Success', `"${menuName}" has been deleted successfully!`, null, null);
+                setTimeout(hideNotification, 2000);
+            }
+        }
+
+        document.getElementById('notificationConfirm').addEventListener('click', handleNotificationConfirm);
+        document.getElementById('notificationCancel').addEventListener('click', hideNotification);
+
+        function openEditMenuModal(menuCardId) {
+            const menuCard = document.getElementById(menuCardId);
+            const menuName = menuCard.querySelector("h3").innerText;
+            showNotification('Approve Item', `Are you sure you want to approve "${menuName}"?`, 'approve', menuCardId);
+        }
+
+        function confirmDeleteMenuItem(cardId) {
+            const menuCard = document.getElementById(cardId);
+            const menuName = menuCard.querySelector("h3").innerText;
+            showNotification('Delete Item', `Are you sure you want to delete "${menuName}"?`, 'delete', cardId);
+        }
+
+        function closeDeleteModal() {
+            document.getElementById("deleteModal").style.display = "none";
+        }
+
+        function confirmDelete() {
+            if (deleteCardId) {
+                const card = document.getElementById(deleteCardId);
+                const menuName = card.querySelector("h3").innerText;
+                card.parentNode.removeChild(card);
+                showNotification('Success', `"${menuName}" has been deleted successfully!`, null, null);
+                setTimeout(hideNotification, 2000);
+            }
+            closeDeleteModal();
+        }
+
+        // Image Modal functionality
+        const imageModal = document.getElementById("imageModal");
+        const enlargedImage = document.getElementById("enlargedImage");
+        const closeImageModal = document.querySelector(".close-image-modal");
+
+        // Add click event to all menu card images
+        document.querySelectorAll('.menu-card .picture img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                imageModal.style.display = "flex";
+                enlargedImage.src = this.src;
+            });
+        });
+
+        // Close modal when clicking the X
+        closeImageModal.onclick = function() {
+            imageModal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            if (event.target == imageModal) {
+                imageModal.style.display = "none";
+            }
+        }
+    </script>   
+</body>
+</html>
