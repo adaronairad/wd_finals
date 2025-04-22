@@ -5,22 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwapIt - Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
     <header class="top-header">
-        <div class="logo-text">SwapIt</div>
-        <div class="search-container">
-            <input type="text" placeholder="search here">
-            <i class="fas fa-search"></i>
-        </div>
-        <div class="header-icons">
-            <i class="far fa-envelope"></i>
-            <i class="far fa-bell"></i>
-            <div class="user-icon">
-                <i class="fas fa-user"></i>
+        <nav class="navbar-home">
+            <h1 onclick="location.href='home.html'">SwapIt</h1>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#contact">Browse</a></li>
+            </ul>
+            <div class="search-bar-home">
+                <div class="search-icon-home">
+                    <i class="material-symbols-outlined search-icon">search</i>
+                </div>
+                <input type="text" placeholder="Search for items...">
             </div>
-        </div>
+            <div class="plus-icon-container" onclick="location.href='create-post.html'">
+                <i class="material-symbols-outlined plus-icon" >add</i>
+            </div>
+            <div class="user-dropdown">
+                <div class="user-dropdown-trigger" onclick="toggleUserDropdown()">
+                    <img src="../img/user.jpg" alt="user" class="user-dropdown-img">
+                    <p class="user-dropdown-name">Adrian</p>
+                    <i class="material-symbols-outlined user-dropdown-icon">keyboard_arrow_down</i>
+                </div>
+                <div class="user-dropdown-menu" id="userDropdownMenu">
+                    <div class="user-dropdown-profile">
+                        <div class="user-dropdown-avatar">
+                            <p>A</p>
+                        </div>
+                        <p class="user-dropdown-fullname">Adrian</p>
+                        <p class="user-dropdown-username">@adrianorada</p>
+                    </div>
+                    <div class="user-dropdown-stats">
+                        <div>
+                            <p>0</p>
+                            <p>trades</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>followers</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>following</p>
+                        </div>
+                    </div>
+                    <div class="user-dropdown-settings">
+                        <button onclick="openSettings()">Settings</button>
+                    </div>
+                </div>
+            </div>
+            <div class="messages">
+                <i class="material-symbols-outlined message-icon">mail</i>
+            </div>
+            <div class="notification">
+                <i class="material-symbols-outlined notification-icon">notifications</i>
+            </div>
+        </nav>
     </header>
     <!-- Dashboard Container -->
     <div class="dashboard-container">
@@ -58,7 +102,7 @@
                 </li>
             </ul>
         </aside>
-<!-- Main Content -->
+        <!-- Main Content -->
         <main class="main-content">
             <div class="header">
                 <h1>Dashboard Overview</h1>
