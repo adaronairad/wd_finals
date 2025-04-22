@@ -290,7 +290,7 @@ body {
     position: absolute;
     right: 0;
     top: 100%;
-    background: white;
+    background: rgb(0, 0, 0);
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -703,7 +703,7 @@ body {
 }
 
 .user-dropdown-name {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .user-dropdown-menu {
