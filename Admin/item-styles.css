@@ -20,84 +20,52 @@ body{
     width: 100%;
 }
 
-.sidebar{
+.sidebar {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
     position: fixed;
-    width: 300px;
-    height: 100%;
-    background: #fff;
-    overflow-x: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 2;
+    left: 0;
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    padding: 2rem;
+    color: var(--text-light);
+    border-right: 1px solid var(--border-color);
 }
 
-.sidebar ul li{
-    width: 100%;
+.nav-menu {
     list-style: none;
+    margin-top: 1rem;
 }
 
-.sidebar ul li a .title1{
-    color:var(--primary-color);
+.nav-item {
+    margin-bottom: 1rem;
 }
 
-.sidebar ul li :hover{
-    border-radius: 3rem;
-    background:var(--primary-color);
-    color: #fff;
-}
-
-.sidebar ul li:first-child{
-    color:var(--primary-color);
-    line-height: 60px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    border-bottom: 1px solid rgb(176, 176, 176);
-}
-
-.sidebar ul li:first-child :hover{
-    background: none;
-}
-
-.sidebar ul li .title1 :hover{
-    background: none;
-    color: var(--primary-color);
-
-}
-
-
-.sidebar ul li a{
-    width: 100%;
-    text-decoration: none;
-    color: #000;
-    height: 60px;
+.nav-link {
     display: flex;
     align-items: center;
+    padding: 0.8rem 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.sidebar ul li a i{
-    min-width: 60px;
-    font-size: 24px;
-    text-align: center;
+.nav-link:hover, .nav-link.active {
+    background-color: #a7e0a9;
+    color: white;
 }
 
-.sidebar .title{
-    padding: 0 10px;
-    font-size: 20px;
+.nav-link:hover i, .nav-link.active i {
+    color: white;
 }
 
-.title1{
-    padding: 0 60px;
-    font-size: 30px;
-    color: var(--primary-color) ;
+.nav-link i {
+    margin-right: 1rem;
+    width: 20px;
+    color: var(--text-light);
 }
 
-.title1 :hover{
-    background: none;
-}
-
-.title1 span{
-    font-size: 30px;
-    color:var(--primary-color);
-}
 
 .main{
     position: absolute;
@@ -123,7 +91,7 @@ body{
 .navbar-home h1 {
     padding: 10px 20px;
     font-size: 35px;
-    color: #333;  
+    color: #ffffff;  
     cursor: pointer; 
 }
 

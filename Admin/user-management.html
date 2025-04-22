@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapIt - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="user-management.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header class="top-header">
+        <nav class="navbar-home">
+            <h1 onclick="location.href='home.html'">SwapIt</h1>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#contact">Browse</a></li>
+            </ul>
+            <div class="search-bar-home">
+                <div class="search-icon-home">
+                    <i class="material-symbols-outlined search-icon">search</i>
+                </div>
+                <input type="text" placeholder="Search for items...">
+            </div>
+            <div class="plus-icon-container" onclick="location.href='create-post.html'">
+                <i class="material-symbols-outlined plus-icon">add</i>
+            </div>
+            <div class="user-dropdown">
+                <div class="user-dropdown-trigger" onclick="toggleUserDropdown()">
+                    <img src="../img/user.jpg" alt="user" class="user-dropdown-img">
+                    <p class="user-dropdown-name">Adrian</p>
+                    <i class="material-symbols-outlined user-dropdown-icon">keyboard_arrow_down</i>
+                </div>
+                <div class="user-dropdown-menu" id="userDropdownMenu">
+                    <div class="user-dropdown-profile">
+                        <div class="user-dropdown-avatar">
+                            <p>A</p>
+                        </div>
+                        <p class="user-dropdown-fullname">Adrian</p>
+                        <p class="user-dropdown-username">@adrianorada</p>
+                    </div>
+                    <div class="user-dropdown-stats">
+                        <div>
+                            <p>0</p>
+                            <p>trades</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>followers</p>
+                        </div>
+                        <div>
+                            <p>0</p>
+                            <p>following</p>
+                        </div>
+                    </div>
+                    <div class="user-dropdown-settings">
+                        <button onclick="openSettings()">Settings</button>
+                    </div>
+                </div>
+            </div>
+            <div class="messages">
+                <i class="material-symbols-outlined message-icon">mail</i>
+            </div>
+            <div class="notification">
+                <i class="material-symbols-outlined notification-icon">notifications</i>
+            </div>
+        </nav>
+    </header>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="./dashboard.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        Dashboard Overview
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./Dashboard.html" class="nav-link active">
+                        <i class="fas fa-users"></i>
+                        User Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./item-management.html" class="nav-link">
+                        <i class="fas fa-list"></i>
+                        Item Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./reports.html" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        Reports
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+<!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1>User Management</h1>
+            </div>
+
+            <div class="user-controls">
+                <div class="view-toggle">
+                    <button class="btn active" data-role="admin"><i class="fas fa-user-shield"></i> Admin</button>
+                    <button class="btn" data-role="user"><i class="fas fa-users"></i> User</button>
+                </div>
+                <div class="entries-control">
+                    Show 
+                    <select>
+                        <option>10</option>
+                        <option>25</option>
+                        <option>50</option>
+                        <option>100</option>
+                    </select>
+                    entries
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>ID <i class="fas fa-sort"></i></th>
+                            <th>Name <i class="fas fa-sort"></i></th>
+                            <th>Email</th>
+                            <th>Username <i class="fas fa-sort"></i></th>
+                            <th>Level <i class="fas fa-sort"></i></th>
+                            <th>Status</th>
+                            <th>User Since <i class="fas fa-sort"></i></th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="admin-users">
+                        <tr>
+                            <td>1</td>
+                            <td><i class="fas fa-user"></i> Sarah Connor</td>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td>sarah.admin</td>
+                            <td><i class="fas fa-user-shield"></i> Admin</td>
+                            <td><span class="status-online"><i class="fas fa-circle"></i> Online</span></td>
+                            <td>Apr 27, 2023</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn-action dropdown-toggle">
+                                        <i class="fas fa-cog"></i> Actions <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-key"></i> Reset Password</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-ban"></i> Suspend</a>
+                                        <a href="#" class="dropdown-item text-danger"><i class="fas fa-trash"></i> Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><i class="fas fa-user"></i> John Smith</td>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td>john.admin</td>
+                            <td><i class="fas fa-user-shield"></i> Admin</td>
+                            <td><span class="status-online"><i class="fas fa-circle"></i> Online</span></td>
+                            <td>May 15, 2023</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn-action dropdown-toggle">
+                                        <i class="fas fa-cog"></i> Actions <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item"><i class="fas fa-edit"></i> Edit</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-key"></i> Reset Password</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-ban"></i> Suspend</a>
+                                        <a href="#" class="dropdown-item text-danger"><i class="fas fa-trash"></i> Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="user-users" style="display: none;">
+                        <tr>
+                            <td>1</td>
+                            <td><i class="fas fa-user"></i> Michael Chen</td>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td>michael.user</td>
+                            <td><i class="fas fa-user"></i> User</td>
+                            <td><span class="status-online"><i class="fas fa-circle"></i> Online</span></td>
+                            <td>Jul 10, 2023</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn-action dropdown-toggle">
+                                        <i class="fas fa-cog"></i> Actions <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item"><i class="fas fa-edit"></i> Edit Profile</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-key"></i> Reset Password</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-shield-alt"></i> Permissions</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-history"></i> View Activity</a>
+                                        <a href="#" class="dropdown-item text-danger"><i class="fas fa-ban"></i> Disable Account</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><i class="fas fa-user"></i> Lisa Wong</td>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td>lisa.user</td>
+                            <td><i class="fas fa-user"></i> User</td>
+                            <td><span class="status-offline"><i class="fas fa-circle"></i> Offline</span></td>
+                            <td>Aug 05, 2023</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn-action dropdown-toggle">
+                                        <i class="fas fa-cog"></i> Actions <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item"><i class="fas fa-edit"></i> Edit Profile</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-key"></i> Reset Password</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-shield-alt"></i> Permissions</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-history"></i> View Activity</a>
+                                        <a href="#" class="dropdown-item text-danger"><i class="fas fa-ban"></i> Disable Account</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><i class="fas fa-user"></i> David Miller</td>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td>david.user</td>
+                            <td><i class="fas fa-user"></i> User</td>
+                            <td><span class="status-online"><i class="fas fa-circle"></i> Online</span></td>
+                            <td>Sep 15, 2023</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn-action dropdown-toggle">
+                                        <i class="fas fa-cog"></i> Actions <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item"><i class="fas fa-edit"></i> Edit Profile</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-key"></i> Reset Password</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-shield-alt"></i> Permissions</a>
+                                        <a href="#" class="dropdown-item"><i class="fas fa-history"></i> View Activity</a>
+                                        <a href="#" class="dropdown-item text-danger"><i class="fas fa-ban"></i> Disable Account</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <div class="table-info admin-info">Displaying 1 to 2 of 2 records</div>
+                <div class="table-info user-info" style="display: none;">Displaying 1 to 3 of 3 records</div>
+                <div class="pagination">
+                    <button class="btn-page" disabled>First</button>
+                    <button class="btn-page" disabled><i class="fas fa-chevron-left"></i></button>
+                    <span>Page 1 of 1</span>
+                    <button class="btn-page" disabled><i class="fas fa-chevron-right"></i></button>
+                    <button class="btn-page" disabled>Last</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="user-management.js"></script>
+</body>
+</html>
