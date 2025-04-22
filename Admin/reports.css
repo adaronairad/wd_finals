@@ -17,7 +17,7 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
-
+/* body styles */
 body {
     background-color: var(--light-bg);
     color: var(--navy-blue);
