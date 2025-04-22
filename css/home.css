@@ -884,6 +884,99 @@ footer{
     align-items: end;
 }  
 
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 1000;
+    color: #333;
+    font-size: 20px;
+    width: 250px;
+}
+
+.dropdown-menu p {
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.dropdown-menu p:hover {
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+}
+
+.dropdown-menu p:last-child {
+    color: #f44336;
+}
+
+.dropdown-menu p:last-child:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 20px;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content button {
+    font-size: 20px;
+    margin: 20px 10px 10px 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+.modal-content button:first-child {
+    background-color: #ccc;
+}
+
+.modal-content button:last-child {
+    background-color: #4caf50;
+    color: white;
+}
+
+.modal-content .delete-modal {
+    background-color: #f44336!important;
+    color: white;
+}
+
   @media screen and (max-width: 1048px) {
     .search-bar-home{
         width: 50%;
