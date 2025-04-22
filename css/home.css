@@ -257,11 +257,7 @@ body {
 }
 
 .messages i {
-    font-size: 30px;
-}
-
-.messages:hover{
-    color: #4CAF50;
+    font-size: 28px;
 }
 
 .notification {
@@ -272,11 +268,7 @@ body {
 }
 
 .notification i {
-    font-size: 30px;
-}
-
-.notification:hover{
-    color: #4CAF50;
+    font-size: 28px;
 }
 
 .user-info-icon{
