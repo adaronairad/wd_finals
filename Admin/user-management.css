@@ -703,7 +703,7 @@ body {
 }
 
 .user-dropdown-name {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .user-dropdown-menu {
@@ -742,4 +742,9 @@ body {
 
 .sidebar {
     height: calc(100vh - 80px);
+}
+
+.user-dropdown-icon{
+    color: white;
+    transition: transform 0.3s ease;
 }
