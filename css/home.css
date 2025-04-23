@@ -1003,9 +1003,9 @@ footer{
 
 .user-info-card{
     width: 80%;
-    height: 50%;
+    height: 300px;
     border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     background-color: white;
     position: absolute;
     top: 250px;
@@ -1147,6 +1147,52 @@ footer{
     padding: 3px;
 }
 
+.user-post{
+    background-color: white;
+}
+
+.grid-container-user {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 40px;
+    padding-top: 110px;
+    margin: 0 130px;
+    
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #f0f0f0;
+    margin: 20px 0 8px 0;
+}
+
+.user-btn {
+    display: flex;
+    margin-left: 40px;
+    height: 50px;
+    align-items: center;
+}
+
+.user-btn button {
+    background-color: white;
+    color: #333;
+    border: 1px;
+    border-radius: 50px;
+    padding: 15px 30px;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.user-btn button:nth-child(1){
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+}
 
 
 

@@ -15,7 +15,7 @@
         <nav class="navbar-home">
             <h1 onclick="location.href='home.html'">SwapIt</h1>
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="#contact">Browse</a></li>
             </ul>
             <div class="search-bar-home">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="user-dropdown-settings">
-                        <button>View Profile</button>
+                        <button onclick="location.href='user-profile.html'">View Profile</button>
                     </div>
                 </div>
             </div>
@@ -72,6 +72,7 @@
     <main>
         <section class="profile-section">
             <div class="profile-bg"></div>
+            
             <div class="user-info-card">
                 <div class="user-profile-pic">
                     <img src="img/user.jpg" alt="">
@@ -105,7 +106,36 @@
                         </div>
                     </div>
                 </div>
+                <div class="divider"></div>
+                <div class="user-btn">
+                    <button>Post</button>
+                    <button>Liked</button>
+                    <button>Reviews</button>
+                </div>
             </div>
+        </section>
+
+        
+        <section class="user-post">
+            <div class="grid-container-user">
+                <div class="grid-item" onclick="location.href='user-post.html'">
+                    <div class="grid-item-content">
+                        <div class="trending-card-img">
+                            <img src="img/stationery-1.jpg" alt="stationery">
+                            <i class="material-symbols-outlined heart-icon">favorite</i>
+                        </div>
+                        <div class="grid-item-info">
+                            <h2>Intermediate Pad Papers</h2>
+                            <div class="grid-other-info">
+                                <i class="material-symbols-outlined">location_on</i>
+                                <p>Campus A</p>
+                                <i class="material-symbols-outlined">favorite</i>
+                                <p>28</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </section>
 
     </main>
