@@ -11,7 +11,7 @@ body {
 
 .navbar-home {
     justify-content: space-evenly;
-    background-color: #aed5a7;
+    background-color: #4caf50;
     display: flex;
     padding: 5px 0;
     position: fixed;
@@ -1194,7 +1194,105 @@ footer{
     color: white;
 }
 
+.settings-section {
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
 
+.settings-left-section{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    background-color: whitesmoke;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+
+}
+
+.settings h1 {
+    color: #333;
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+
+.settings p {
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    padding : 0 0 30px 30px;
+}
+
+.settings p:nth-child(5){
+    color: #f44336;
+}
+
+.settings p:nth-child(6) {
+    color: #f44336;
+}
+
+.settings-right-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.settings-profile-pic {
+    width: 150px;
+    height: 150px;    
+}
+
+.settings-profile-pic img {
+    border: 3px solid #45a049;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.user-details h1 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 0 20px 50px;
+}
+
+.user-details h1:nth-child(1){
+    padding-top: 30px;
+}
+
+.user-details p {
+    color: #666;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.name, .username, .student-id, .meeting-spot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    padding: 10px 15px;
+    margin-top: 10px;
+    height: 50px;
+    width: 40%;
+    border: 1px solid #ccc;
+}
 
 
 

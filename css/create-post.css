@@ -10,7 +10,8 @@ body {
 }
 
 .navbar-create-post {
-    background-color: #aed5a7;
+    justify-content: space-evenly;
+    background-color: #4caf50;
     display: flex;
     padding: 5px 0;
     position: fixed;
@@ -24,7 +25,7 @@ body {
 .navbar-create-post h1 {
     padding: 10px 20px;
     font-size: 35px;
-    color: #333;  
+    color: whitesmoke;  
     cursor: pointer; 
 }
 
