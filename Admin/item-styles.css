@@ -195,13 +195,13 @@ body{
 
 .user-dropdown-name {
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
     margin: 0;
 }
 
 .user-dropdown-icon {
     font-size: 20px;
-    color: #333;
+    color: #ffffff;
 }
 
 .user-dropdown-menu {
@@ -253,7 +253,7 @@ body{
 
 .user-dropdown-username {
     font-size: 14px;
-    color: #777;
+    color: #ffffff;
 }
 
 .user-dropdown-stats {
