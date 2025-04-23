@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - SwapIt Admin</title>
+    <link rel="stylesheet" href="../Admin/setting-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="logo">SwapIt</div>
+            <div class="header-search">
+                <input type="text" placeholder="search here">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-icons">
+                <a href="#" aria-label="Messages"><i class="fas fa-envelope"></i></a>
+                <a href="#" aria-label="Notifications"><i class="fas fa-bell"></i></a>
+                <a href="#" aria-label="Profile"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#"> 
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <i class="fas fa-users-cog"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <i class="fas fa-list-alt"></i>
+                            <span>Item Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li class="active"> 
+                        <a href="#"> 
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <h1>Settings</h1>
+
+            <div class="settings-section">
+                <h2>Site Configuration</h2>
+                <form id="site-config-form">
+                    <div class="form-group">
+                        <label for="site-name">Site Name</label>
+                        <input type="text" id="site-name" value="SwapIt" placeholder="Enter site name">
+                    </div>
+                    <div class="form-group">
+                        <label for="site-description">Site Description</label>
+                        <textarea id="site-description" rows="3" placeholder="Enter a short description for the site">Your place for easy item swapping!</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Site Settings</button>
+                </form>
+            </div>
+
+            <div class="settings-section">
+                <h2>Features</h2>
+                <form id="features-form">
+                    <div class="form-group toggle-group">
+                        <label for="listing-approval">Require Admin Approval for New Listings</label>
+                        <label class="switch">
+                            <input type="checkbox" id="listing-approval" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                     <div class="form-group toggle-group">
+                        <label for="maintenance-mode">Enable Maintenance Mode</label>
+                         <label class="switch">
+                            <input type="checkbox" id="maintenance-mode">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                   <button type="submit" class="btn btn-primary">Save Feature Settings</button>
+                </form>
+            </div>
+
+             <div class="settings-section">
+                <h2>Admin Profile</h2>
+                <form id="admin-profile-form">
+                     <div class="form-group">
+                        <label for="admin-email">Current Email</label>
+                        <input type="email" id="admin-email" value="admin@swapit.com" placeholder="Enter your email" readonly>
+                        <small>Contact support to change admin email.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" placeholder="Enter current password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" placeholder="Enter new password (min 8 characters)">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm new password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Password</button>
+                </form>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="../Admin/admin-setting.js"></script>
+
+</body>
+</html>
